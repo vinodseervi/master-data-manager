@@ -1,4 +1,4 @@
-package com.vi.models;
+package com.vi.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
