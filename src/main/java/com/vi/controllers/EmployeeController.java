@@ -1,5 +1,6 @@
 package com.vi.controllers;
-
+import com.sun.org.slf4j.internal.Logger;
+import com.sun.org.slf4j.internal.LoggerFactory;
 import com.vi.exception.ResourceNotFoundException;
 import com.vi.models.Employee;
 import com.vi.repository.EmployeeRepository;
@@ -12,13 +13,16 @@ import java.util.List;
 @RestController
 @RequestMapping("/v1/employees")
 public class EmployeeController {
+    Logger logger = LoggerFactory.getLogger(EmployeeController.class);
     @Autowired
     private EmployeeRepository employeeRepository;
 
     @GetMapping
     public List<Employee> getAllEmployee() {
+     //   logger.error("Get All Employee Success");
         return employeeRepository.findAll();
     }
+
 
     //build create employee Rest APIs
     @PostMapping
