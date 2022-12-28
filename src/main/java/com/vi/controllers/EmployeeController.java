@@ -4,6 +4,7 @@ import com.sun.org.slf4j.internal.LoggerFactory;
 import com.vi.exception.ResourceNotFoundException;
 import com.vi.models.Employee;
 import com.vi.repository.EmployeeRepository;
+import com.vi.response.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +21,7 @@ public class EmployeeController {
     @GetMapping
     public List<Employee> getAllEmployee() {
      //   logger.error("Get All Employee Success");
+       // Response res = new Response("SUCCESS",new Object());
         return employeeRepository.findAll();
     }
 
