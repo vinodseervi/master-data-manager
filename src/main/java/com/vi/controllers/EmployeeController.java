@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/v1/employees")
 public class EmployeeController {
-    Logger logger = LoggerFactory.getLogger(EmployeeController.class);
+   // Logger logger = LoggerFactory.getLogger(EmployeeController.class);
     @Autowired
     private EmployeeRepository employeeRepository;
 
